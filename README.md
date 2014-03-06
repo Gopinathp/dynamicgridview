@@ -25,7 +25,11 @@ Coming soon
 ===========
 
 Documentation.
+
 Better demo code.
+
 Empty View support.
+
 Automatic scroll when dragging an item.
+
 Data structure optimizations.
