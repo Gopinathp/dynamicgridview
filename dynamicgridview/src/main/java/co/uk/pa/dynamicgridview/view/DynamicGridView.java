@@ -65,7 +65,7 @@ public class DynamicGridView extends ViewGroup implements GestureDetector.OnGest
     private ItemRepresentation mHighlitedItem;
 
     public interface OnItemClickListener {
-        public void onItemClicked(int row, int column, View view);
+        public void onItemClicked(int column, int row, View view);
     }
 
     /**
@@ -192,6 +192,12 @@ public class DynamicGridView extends ViewGroup implements GestureDetector.OnGest
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
+
+
+    public void setItemClickListener(OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
+    }
+
 
     public DynamicGridAdapter getAdapter() {
         return mAdapter;
@@ -571,7 +577,9 @@ public class DynamicGridView extends ViewGroup implements GestureDetector.OnGest
             } else if (mHighlitedItem != null && mHighlitedItem.view != null) {
                 mHighlitedItem.view.setSelected(false);
                 if (!mIsScrolling) {
-
+                    if (mItemClickListener != null) {
+                        mItemClickListener.onItemClicked(mSelectedItemColumn, mSelectedColumnIndex, mHighlitedItem.view);
+                    }
                 }
                 mHighlitedItem = null;
             }
