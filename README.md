@@ -8,7 +8,7 @@ Video
 =====
 
 A video showing this component in action is available here:
-
+http://www.youtube.com/watch?v=x6mMppmu5s4
 
 Usage
 =====
