@@ -19,3 +19,13 @@ Known issues
 ============
 
 The component has been tested from Android 4.0 onward. It should work without any problem on older android version but probably needs some adjustments on animations/view invalidation
+
+
+Coming soon
+===========
+
+Documentation.
+Better demo code.
+Empty View support.
+Automatic scroll when dragging an item.
+Data structure optimizations.
